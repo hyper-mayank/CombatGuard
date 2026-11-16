@@ -1,0 +1,33 @@
+name: CombatGuard
+version: 1.0.0
+main: com.hydrazz.combatguard.CombatGuard
+api-version: '1.16'
+folia-supported: true
+description: Enterprise Anti-CombatLog & PvP Tagging Engine for Bukkit, Spigot, Paper, Purpur, and Folia across Minecraft 1.16.5 - 1.21.4+.
+authors: [Hydrazz]
+website: https://modrinth.com/project/combat-guard
+softdepend: [Vault, PlaceholderAPI]
+
+commands:
+  combatguard:
+    description: Manage CombatGuard and inspect combat status.
+    aliases: [cg, combattag, ct]
+    permission: combatguard.use
+    usage: /combatguard [status|tag|untag|reload|help]
+
+permissions:
+  combatguard.use:
+    description: Allows checking own combat status with /cg.
+    default: true
+  combatguard.admin:
+    description: Full administrative access to tag, untag, and reload CombatGuard.
+    default: op
+  combatguard.bypass:
+    description: Bypasses being tagged into combat entirely.
+    default: op
+  combatguard.bypass.commands:
+    description: Allows executing commands even while combat-tagged.
+    default: op
+  combatguard.bypass.elytra:
+    description: Allows using elytra even while combat-tagged.
+    default: op
